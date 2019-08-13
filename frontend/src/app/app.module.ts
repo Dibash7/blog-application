@@ -36,12 +36,13 @@ import { BlogHttpService } from './blog-http.service';
     ToastrModule.forRoot(),
     RouterModule.forRoot(
       [
-        {path:'home', component:HomeComponent},
-        {path:'', redirectTo:'home', pathMatch: 'full'},
-        {path:'blog/:blogId', component:BlogViewComponent},
-        {path:'create', component:BlogCreateComponent},
-        {path:'edit/:blogId', component:BlogEditComponent},
-        {path:'*', component:NotFoundComponent}
+        {path: 'home', component: HomeComponent},
+        {path: '', redirectTo: 'home', pathMatch: 'full'},
+        {path: 'blog/:blogId', component: BlogViewComponent},
+        {path: 'create', component: BlogCreateComponent},
+        {path: 'edit/:blogId', component: BlogEditComponent},
+        {path: 'about', component: AboutComponent},
+        {path: '*', component: NotFoundComponent}
       ]
     )
   ],

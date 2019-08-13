@@ -6,7 +6,7 @@
         <p class="card-text">{{blog.description}}</p>
         <p class="card-text">is created by {{blog.author}}</p>
         <p class="card-text">is published on {{blog.created|date}}</p>
-        <a [routerLink]="['/blog',blog.blogId]" class="btn btn-primary">Go to Blog</a>
+        <a [routerLink]="['/blog',blog.blogId]">Go to Blog</a>
       </div>
     </div>
   </div>
