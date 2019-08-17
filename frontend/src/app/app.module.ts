@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { RouterModule, Routes, Router } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 
@@ -34,19 +34,19 @@ import { BlogHttpService } from './blog-http.service';
     FormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    RouterModule.forRoot(
-      [
-        {path: 'home', component: HomeComponent},
-        {path: '', redirectTo: 'home', pathMatch: 'full'},
-        {path: 'blog/:blogId', component: BlogViewComponent},
-        {path: 'create', component: BlogCreateComponent},
-        {path: 'edit/:blogId', component: BlogEditComponent},
-        {path: 'about', component: AboutComponent},
-        {path: '*', component: NotFoundComponent}
-      ]
-    )
+    RouterModule.forRoot([
+      { path: 'home', component: HomeComponent },
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
+      { path: 'blog/:blogId', component: BlogViewComponent },
+      { path: 'create', component: BlogCreateComponent },
+      { path: 'edit/:blogId', component: BlogEditComponent },
+      { path: 'about', component: AboutComponent },
+      { path: '404', component: NotFoundComponent },
+      { path: '*', redirectTo: '404' },
+      { path: '**', redirectTo: '404' }
+    ])
   ],
   providers: [BlogHttpService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
