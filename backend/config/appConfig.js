@@ -1,11 +1,11 @@
-const mongo = require('../auth/key');
+require('dotenv').config();
 
 let appConfig = {
     port: process.env.PORT || 3000,
     allowedCorsOrigin: "*",
     env: "dev",
     db: {
-        uri: mongo.mongo_uri
+        uri: process.env.API_URI
     },
     apiVersion: "/api/v1"
 };
